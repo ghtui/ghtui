@@ -1,9 +1,9 @@
 package main
 
 import (
-    "ghtui/ghtui/cmd"
+	"ghtui/ghtui/cmd"
 )
 
 func main() {
-    cmd.Execute()
+	cmd.Execute()
 }
