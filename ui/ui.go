@@ -21,10 +21,6 @@ const (
     statusReady
 )
 
-var (
-    appStyle = lipgloss.NewStyle().Padding(2, 2).Align(lipgloss.Center)
-)
-
 type model struct {
     quit         bool
     done         bool
@@ -108,7 +104,7 @@ func (m model) View() string {
     switch m.status {
     case statusInit:
     case statusLoading:
-        s += appStyle.Render(m.spinner.View() + " Loading user...")
+        s += common.AppStyle().Render(m.spinner.View() + " Loading user...")
     case statusReady:
         s += m.repositories.View()
     }

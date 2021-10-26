@@ -11,3 +11,9 @@ func BatchCommands(cmds... tea.Cmd) tea.Cmd {
     }
     return tea.Batch(output...)
 }
+
+func Cmd(msg tea.Msg) tea.Cmd {
+    return func() tea.Msg {
+        return msg
+    }
+}
